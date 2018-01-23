@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import EscapeRegExp from 'escape-string-regexp'
 import SortBy from 'sort-by'
@@ -90,11 +91,10 @@ class ListContacts extends Component {
             onChange={(event) => this.updateQuery(event.target.value)}
           />
 
-          <a
-            href='#create'
-            onClick={this.props.navigation}
+          <Link
+            to='/create'
             className='add-contact'
-          >Add Contact</a>
+          >Add Contact</Link>
 
         </div>
 
