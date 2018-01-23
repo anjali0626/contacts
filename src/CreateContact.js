@@ -6,8 +6,8 @@ import SerializeForm from 'form-serialize'
 class CreateContact extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
-    const values = SerializeForm(e.target, {hash: true})
-
+    const values = SerializeForm(e.target, { hash: true })
+    console.log('New contact details:', values)
     if(this.props.onCreateContact) {
      this.props.onCreateContact(values)
     }
